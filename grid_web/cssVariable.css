@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+:root {/* 변수선언 */
+  --bg-color: #000;
+  --bg-contain: no-repeat 50% / contain;
+  --bg-cover: no-repeat 50% / cover;
+  --txt-indent: -9999px;
+}
