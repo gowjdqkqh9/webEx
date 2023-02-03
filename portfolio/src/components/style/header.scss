@@ -1,0 +1,307 @@
+.header {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  .header_container {
+    .gnb {
+      width: 100vw;
+      height: 100px;
+      box-sizing: border-box;
+      padding: 0 5vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      .logo {
+        width: 33px;
+        height: 26px;
+        a {
+          width: 100%;
+          height: 100%;
+          background: url(../../assets/images/logo_black.png) no-repeat 50% / contain;
+          display: block;
+        }
+      }
+      ul {
+        width: 7vw;
+        height: 26px;
+        display: flex;
+        justify-content: space-between;
+        .color_mode_btn {
+          min-width: 25px;
+          transition: 0.3s;
+          a {
+            width: 100%;
+            height: 100%;
+            background: url(../../assets/images/btn_colorMode.png) no-repeat 50% / contain;
+            display: block;
+          }
+        }
+        .color_mode_btn:hover {
+          transform: rotate(180deg);
+        }
+        .menu_btn {
+          width: 26px;
+          transition: 0.3s;
+          a {
+            width: 100%;
+            height: 100%;
+            // display: block;
+            display: flex;
+            justify-content: space-between;
+            span {
+              width: 1px;
+              height: 100%;
+              background-color: #000;
+              margin-left: 5px;
+            }
+          }
+        }
+        .menu_btn:hover {
+          transform: rotate(90deg);
+          a {
+            .short {
+              height: 60%;
+            }
+          }
+        }
+      }
+    }
+
+    .contact_btn {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      bottom: 5vw;
+      right: 5vw;
+      transition: 0.4s;
+      a {
+        width: 100%;
+        height: 100%;
+        background: url(../../assets/images/goUp.png) no-repeat 50% / contain;
+        display: block;
+        animation: rotate_image 6s linear infinite;
+        transform-origin: 50% 50%;
+        @keyframes rotate_image {
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
+    .contact_btn:hover {
+      // width: 8em;
+      // height: 8em;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .menu_gnb {
+    display: none;
+  }
+}
+
+/********** menu gnb **********/
+.active {
+  z-index: 1;
+  // width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  .header_container {
+    .gnb {
+      width: 100vw;
+      height: 100px;
+      box-sizing: border-box;
+      padding: 0 5vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      .logo {
+        width: 33px;
+        height: 26px;
+        a {
+          width: 100%;
+          height: 100%;
+          background: url(../../assets/images/logo_black.png) no-repeat 50% / contain;
+          display: block;
+        }
+      }
+      ul {
+        width: 7vw;
+        height: 26px;
+        display: flex;
+        justify-content: space-between;
+        .color_mode_btn {
+          min-width: 25px;
+          transition: 0.3s;
+          a {
+            width: 100%;
+            height: 100%;
+            background: url(../../assets/images/btn_colorMode.png) no-repeat 50% / contain;
+            display: block;
+          }
+        }
+        .color_mode_btn:hover {
+          transform: rotate(180deg);
+        }
+        .menu_btn {
+          width: 26px;
+          transition: 0.3s;
+          a {
+            width: 100%;
+            height: 100%;
+            // display: block;
+            display: flex;
+            justify-content: space-between;
+            span {
+              width: 1px;
+              height: 100%;
+              background-color: #000;
+              margin-left: 5px;
+            }
+            .bar1 {
+              transform: translateX(5px) rotate(45deg);
+            }
+            .bar2 {
+              transform: translateX(-5px) rotate(-45deg);
+            }
+            .short {
+              height: 0;
+              opacity: 0;
+            }
+          }
+        }
+        .menu_btn:hover {
+          transform: rotate(90deg);
+          a {
+            .short {
+              height: 60%;
+            }
+          }
+        }
+      }
+    }
+
+    .contact_btn {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      bottom: 5vw;
+      right: 5vw;
+      transition: 0.4s;
+      a {
+        width: 100%;
+        height: 100%;
+        background: url(../../assets/images/goUp.png) no-repeat 50% / contain;
+        display: block;
+        animation: rotate_image 6s linear infinite;
+        transform-origin: 50% 50%;
+        @keyframes rotate_image {
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
+    .contact_btn:hover {
+      // width: 8em;
+      // height: 8em;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+  }
+  /********** menu_gnb **********/
+  .menu_gnb {
+    // height: 100vh;
+    margin: 60px 20vw 0;
+    display: flex;
+    justify-content: center;
+    ul {
+      display: flex;
+      flex-direction: column;
+      font-family: "Handel", "Mulish";
+      li {
+        line-height: 1.7;
+        a:hover {
+          color: #000;
+          ~ a {
+            color: rgba(0, 0, 0, 0.1);
+          }
+        }
+      }
+    }
+    .main_menu {
+      display: flex;
+      flex-direction: column;
+      font-weight: 800;
+      font-size: 4em;
+      margin-right: 10vw;
+    }
+    .contact_menu {
+      display: flex;
+      flex-direction: column;
+      font-size: 1.4em;
+      font-weight: 700;
+      margin-top: 20px;
+      .contact_git {
+        display: flex;
+        align-items: center;
+        span {
+          width: 30px;
+          height: 20px;
+          background: url(../../assets/images/gitHub.png) no-repeat 50% / contain;
+          opacity: 0.4;
+        }
+      }
+      .contact_notion {
+        display: flex;
+        align-items: center;
+        span {
+          width: 30px;
+          height: 20px;
+          background: url(../../assets/images/notion.png) no-repeat 50% / contain;
+          opacity: 0.4;
+        }
+      }
+    }
+    .bg_border {
+      z-index: -9999;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      span {
+        width: 1px;
+        height: 65%;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
+
+/********** 735px 이하 **********/
+@media screen and (max-width: 735px) {
+  .header {
+    .gnb {
+      ul {
+        width: 70px;
+      }
+    }
+
+    .contact_btn {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}

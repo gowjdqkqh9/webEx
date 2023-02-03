@@ -1,0 +1,177 @@
+.contact {
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  grid-template-rows: repeat(6, 1fr);
+  .roll {
+    grid-row: 1/2;
+    width: 100%;
+    height: 100%;
+    font-family: "NanumSquare";
+    font-weight: 600;
+    font-size: 10em;
+    color: rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+    .roll_wrap {
+      animation: 30s linear 0s infinite normal forwards running rollingleft;
+    }
+    @keyframes rollingleft {
+      0% {
+        transform: translateX(0);
+      }
+      // 50% {
+      //   transform: translateX(-100%);
+      // }
+      // 50.01% {
+      //   transform: translateX(100%);
+      // }
+      100% {
+        transform: translateX(-200%);
+      }
+    }
+
+    p {
+      width: 500vw;
+    }
+  }
+  h2 {
+    grid-row: 2/4;
+    font-family: "Mulish";
+    font-weight: 800;
+    font-size: 4em;
+    margin: 0 10vw;
+  }
+  .contact_btn {
+    font-family: "Mulish";
+    font-weight: 300;
+    font-size: 1.6em;
+    height: 100%;
+    grid-row: 4/6;
+    display: flex;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    .git {
+      width: 100%;
+      height: 100%;
+      border-right: 1px solid rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      position: relative;
+      .git_logo {
+        width: 100%;
+        height: 100%;
+        background: url(../../assets/images/gitHub.png) no-repeat 50% / contain;
+        transform: translateX(45%);
+        opacity: 0;
+        transition: 0.6s;
+        position: absolute;
+        right: 0;
+      }
+    }
+    .git:hover {
+      .git_logo {
+        opacity: 0.05;
+      }
+      a {
+        .right {
+          margin-left: 6vw;
+        }
+      }
+    }
+    .notion {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      .notion_logo {
+        width: 100%;
+        height: 100%;
+        background: url(../../assets/images/notion.png) no-repeat 50% / contain;
+        transform: translateX(45%);
+        opacity: 0;
+        transition: 1s;
+        position: absolute;
+        right: 0;
+      }
+    }
+    .notion:hover {
+      .notion_logo {
+        opacity: 0.05;
+      }
+      a {
+        .right {
+          margin-left: 6vw;
+        }
+      }
+    }
+    a {
+      width: 100%;
+      height: 100%;
+      padding-left: 100px;
+      display: block;
+      display: flex;
+      align-items: flex-end;
+      position: absolute;
+      p {
+        height: 22.5px;
+        margin-bottom: 50px;
+        overflow: hidden;
+        transition: 0.4s;
+        .bold {
+          font-weight: 700;
+        }
+      }
+      .right {
+        width: 30px;
+        height: 30px;
+        background: url(../../assets/images/contact_right.svg) no-repeat 50% / contain;
+        margin-bottom: 43px;
+        margin-left: 5vw;
+        transition: 0.3s;
+      }
+    }
+  }
+
+  footer {
+    font-family: "Mulish";
+    grid-row: 6/7;
+    ul {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      li {
+        a {
+          font-size: 15px;
+          span {
+            font-weight: 700;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contact {
+    .contact_btn {
+      display: flex;
+      flex-direction: column;
+      .git {
+        box-sizing: border-box;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    footer {
+      padding-left: 15vw;
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        li {
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+}
